@@ -1,0 +1,19 @@
+{
+  "name": "supertest_poc",
+  "version": "1.0.0",
+  "description": "This is a POC for supertest tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.spec.js"
+  },
+  "keywords": [
+    "supertest"
+  ],
+  "author": "Faisal Khatri",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "supertest": "^6.1.3"
+  }
+}
