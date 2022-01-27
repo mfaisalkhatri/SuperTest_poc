@@ -3,3 +3,7 @@
 
 #VS Code setting files
 .vscode/
+
+# IntelliJ IDEA
+/.idea/
+*.iml
