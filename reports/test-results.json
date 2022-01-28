@@ -1,4 +1,3 @@
-null
 {
   "stats": {
     "suites": 5,
@@ -6,16 +5,16 @@ null
     "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2022-01-28T18:16:24.468Z",
-    "end": "2022-01-28T18:16:27.194Z",
-    "duration": 2726
+    "start": "2022-01-28T19:14:22.341Z",
+    "end": "2022-01-28T19:14:24.649Z",
+    "duration": 2308
   },
   "tests": [
     {
       "title": "should successfully pass the test for delete request",
       "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
       "file": "D:\\Study\\SuperTest_POC\\test\\deleteTest.spec.js",
-      "duration": 378,
+      "duration": 383,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -24,7 +23,7 @@ null
       "title": "should successfully pass the test for get api with query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 82,
+      "duration": 96,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -33,7 +32,7 @@ null
       "title": "should successfully pass the test for get api without query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 69,
+      "duration": 61,
       "currentRetry": 0,
       "speed": "medium",
       "err": {}
@@ -42,7 +41,7 @@ null
       "title": "should successfully pass the test for get api with path param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 1129,
+      "duration": 656,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -51,7 +50,7 @@ null
       "title": "should successfully pass the test for patch request",
       "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
       "file": "D:\\Study\\SuperTest_POC\\test\\patchTest.spec.js",
-      "duration": 361,
+      "duration": 395,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -60,7 +59,7 @@ null
       "title": "should successfully pass the test for post api",
       "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
       "file": "D:\\Study\\SuperTest_POC\\test\\postTest.spec.js",
-      "duration": 357,
+      "duration": 332,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -69,7 +68,7 @@ null
       "title": "should successfully pass the test for post api",
       "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
       "file": "D:\\Study\\SuperTest_POC\\test\\putTest.spec.js",
-      "duration": 333,
+      "duration": 370,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -82,7 +81,7 @@ null
       "title": "should successfully pass the test for delete request",
       "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
       "file": "D:\\Study\\SuperTest_POC\\test\\deleteTest.spec.js",
-      "duration": 378,
+      "duration": 383,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -91,7 +90,7 @@ null
       "title": "should successfully pass the test for get api with query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 82,
+      "duration": 96,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -100,7 +99,7 @@ null
       "title": "should successfully pass the test for get api without query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 69,
+      "duration": 61,
       "currentRetry": 0,
       "speed": "medium",
       "err": {}
@@ -109,7 +108,7 @@ null
       "title": "should successfully pass the test for get api with path param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
       "file": "D:\\Study\\SuperTest_POC\\test\\getTest.spec.js",
-      "duration": 1129,
+      "duration": 656,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -118,7 +117,7 @@ null
       "title": "should successfully pass the test for patch request",
       "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
       "file": "D:\\Study\\SuperTest_POC\\test\\patchTest.spec.js",
-      "duration": 361,
+      "duration": 395,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -127,7 +126,7 @@ null
       "title": "should successfully pass the test for post api",
       "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
       "file": "D:\\Study\\SuperTest_POC\\test\\postTest.spec.js",
-      "duration": 357,
+      "duration": 332,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -136,7 +135,7 @@ null
       "title": "should successfully pass the test for post api",
       "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
       "file": "D:\\Study\\SuperTest_POC\\test\\putTest.spec.js",
-      "duration": 333,
+      "duration": 370,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
