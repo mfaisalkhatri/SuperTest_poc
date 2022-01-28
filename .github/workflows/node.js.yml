@@ -35,12 +35,10 @@ jobs:
       run: npm i -g -D supertest mocha chai
     - run: npm ci
     - run: npm run build --if-present
-
-    - name: Run the tests
-      run: npm test
+    - run: npm test
     
     - name: Test Report
-    - uses: dorny/test-reporter@v1
+      uses: dorny/test-reporter@v1
       if: success() || failure()      # run this step even if previous step failed
       with:
         name: test-results
