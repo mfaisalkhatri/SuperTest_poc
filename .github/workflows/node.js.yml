@@ -42,5 +42,5 @@ jobs:
       if: success() || failure()      # run this step even if previous step failed
       with:
         name: test-results
-        path: /reports/test-results.json
+        path: ${{ github.workspace }}/reports/test-results.json
         reporter: 'mocha-json'
