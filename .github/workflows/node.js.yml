@@ -5,9 +5,13 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+        - main
+        - issue-*
   pull_request:
-    branches: [ main ]
+    branches:
+        - main
+        - issue-*
 
 jobs:
   build:
@@ -27,8 +31,18 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - name: Install supertest, mocha, chai and run the tests
+    - name: Install supertest, mocha, chai
       run: npm i -g -D supertest mocha chai
     - run: npm ci
     - run: npm run build --if-present
+    
+    - name: Run the tests
     - run: npm test
+    
+    - name: Test Report
+    - uses: dorny/test-reporter@v1
+        if: success() || failure()      # run this step even if previous step failed
+        with:
+          name: test-results
+          path: ${{ github.workspace }}/reports/test-results.json
+          reporter: 'mocha-json'
