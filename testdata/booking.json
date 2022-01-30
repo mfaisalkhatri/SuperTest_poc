@@ -1,0 +1,11 @@
+{
+    "firstname": "Michael",
+    "lastname": "Denver",
+    "totalprice": 100,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2022-01-01",
+        "checkout": "2022-07-01"
+    },
+    "additionalneeds": "Breakfast"
+}

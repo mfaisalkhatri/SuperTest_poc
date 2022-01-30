@@ -1,0 +1,17 @@
+1. Create a Booking. Pass
+
+2. Save the Booking Id from create booking response -Pass
+
+3. Get Booking using the id in step 2 and compare with the create booking response. Pass
+
+4. Create Auth token method - Pass
+
+5. Update the booking dates and total price using the id in step 2 andauth token in step 4. Pass
+
+6. Assert the response of update booking - Pass
+
+7. Update the firtname and last name using the Patch request and assert the response. Pass
+
+8. Delete the booking and assert the status code and response. Pass
+
+9. Get the Booking Id which is deleted(Bookng Id from Step 2). Pass
