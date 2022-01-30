@@ -1,4 +1,4 @@
-# POC on SuperTest.
+# API Testing using Super Test
 
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -22,7 +22,9 @@ You need to have the following installed in your machine:
 4. For running the tests, you need to type the command: `npm test`. *(Check Package.json for more details)*
 
 ## Talking more about the Scenarios Covered in this project:
-I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. You will find the example code in the test folder of the repository.
+- I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. You will find the example code in the test folder of the repository.
+
+- End to End scenarios have been added for the restful booker APIs.
 
 ## :question: Need Assistance?
 
