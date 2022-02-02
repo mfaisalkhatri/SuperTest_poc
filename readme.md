@@ -24,6 +24,7 @@ You need to have the following installed in your machine:
 3. I have used `mocha` framework for writing tests and `chai` for assertions, following command should help to install the required npm packages:
    `npm i -D supertest mocha chai`
 4. For running the tests, you need to type the command: `npm test`. _(Check Package.json for more details)_
+5. For generating the mochawesome report, run the command `npm run report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
 
 ## Talking more about the Scenarios Covered in this project:
 
