@@ -7,3 +7,4 @@
 # IntelliJ IDEA
 /.idea/
 *.iml
+/mochawesome-report/
