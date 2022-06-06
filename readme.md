@@ -15,16 +15,26 @@ I decided to do a POC of this tool to understand it better, hence this project w
 I thought of sharing this on github, so it helps others as well who want to learn more about this tool.
 _Checkout [this][] link to learn more about `SuperTest`_
 
-## Getting Started:
-
+### Pre-requisite:
 You need to have the following installed in your machine:
 
-1. Node (Latest Version).
-2. npm(Latest Version).
-3. I have used `mocha` framework for writing tests and `chai` for assertions, following command should help to install the required npm packages:
-   `npm i -D supertest mocha chai`
-4. For running the tests, you need to type the command: `npm test`. _(Check Package.json for more details)_
-5. For generating the mochawesome report, run the command `npm run report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
+1. Node (Latest Version)
+2. npm (it comes with node. No explicit setup required)
+
+### Install depndencies:
+```
+npm run install
+```
+
+### Run Test:
+```
+npm test
+```
+
+### Report folder path:
+```
+<ROO_PROJECT>/mochawesome-report
+```
 
 ## Talking more about the Scenarios Covered in this project:
 

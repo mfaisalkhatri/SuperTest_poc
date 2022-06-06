@@ -4,8 +4,7 @@
 	"description": "This is a POC for supertest tool",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha **/*.spec.js && mocha --reporter json > reports/test-results.json",
-		"report": "mocha --reporter mochawesome"
+		"test": "mocha src/test/*.spec.js --timeout 20000 --reporter mochawesome"
 	},
 	"keywords": [
 		"supertest"
