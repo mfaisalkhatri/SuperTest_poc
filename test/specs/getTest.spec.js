@@ -16,11 +16,11 @@
 
 const request = require('supertest');
 const { expect } = require('chai');
+const { BASE_URL, FAKER_BASE_URL } = require('../constants/api');
 
 describe('Get API tests using supertest', () => {
-	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for get api with query param', async () => {
-		const response = await request(baseurl)
+		const response = await request(BASE_URL)
 			.get('/api/users')
 			.query({ page: '2' })
 			.set('Accept', 'application/json')
@@ -32,7 +32,7 @@ describe('Get API tests using supertest', () => {
 		expect(response.body.data[0].first_name).to.be.equal('Michael');
 	});
 	it('should successfully pass the test for get api without query param', async () => {
-		const response = await request(baseurl).get('/api/users/2');
+		const response = await request(BASE_URL).get('/api/users/2');
 
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.data.id).to.be.equal(2);
@@ -41,8 +41,7 @@ describe('Get API tests using supertest', () => {
 
 	it('should successfully pass the test for get api with path param', async () => {
 		let param = 1;
-		const response = await request('https://fakerestapi.azurewebsites.net')
-			.get('/api/v1/Authors/' + param);
+		const response = await request(FAKER_BASE_URL).get('/api/v1/Authors/' + param);
 
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.id).to.be.equal(1);

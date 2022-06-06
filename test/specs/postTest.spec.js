@@ -16,12 +16,12 @@
 
 const request = require('supertest');
 const { expect } = require('chai');
-const userdata = require('../testdata/userdata.json');
+const userdata = require('../data/userdata.json');
+const { BASE_URL } = require('../constants/api');
 
 describe('Post API tests using supertest', () => {
-	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for post api', async () => {
-		const response = await request(baseurl)
+		const response = await request(BASE_URL)
 			.post('/api/users')
 			.send(userdata)
 			.set('Accept', 'application/json')

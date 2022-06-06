@@ -5,7 +5,7 @@
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+	   http://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,15 +13,22 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+
 const request = require('supertest');
 const { expect } = require('chai');
+const { BASE_URL } = require('../constants/api');
 
-describe('Delete API tests using supertest', () => {
-	const baseurl = 'https://reqres.in';
-	it('should successfully pass the test for delete request', async () => {
-		const response = await request(baseurl)
-			.delete('/api/users/2');
+describe('Patch API tests using supertest', () => {
+	it('should successfully pass the test for patch request', async () => {
+		const response = await request(BASE_URL)
+			.patch('/api/users/2')
+			.send({ name: 'Michael', job: 'Tech Lead' })
+			.set('Accept', 'application/json')
+			.set('Content-Type', 'application/json');
 
-		expect(response.statusCode).to.be.equal(204);
+		expect(response.statusCode).to.be.equal(200);
+		expect(response.body.name).to.be.equal('Michael');
+		expect(response.body.job).to.be.equal('Tech Lead');
+		expect(response.body.updatedAt).not.to.be.null;
 	});
 });

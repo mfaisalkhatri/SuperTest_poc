@@ -16,17 +16,17 @@
 
 const request = require('supertest');
 const { expect } = require('chai');
-const booking = require('../testdata/booking.json');
-const userauthdata = require('../testdata/userauthdata.json');
-const updatedbooking = require('../testdata/updatedbooking.json');
+const booking = require('../data/booking.json');
+const userauthdata = require('../data/userauthdata.json');
+const updatedbooking = require('../data/updatedbooking.json');
+const { RESTFUL_BASE_URL } = require('../constants/api');
 
 describe('Restful Booker API Tests', () => {
-    const baseurl = 'https://restful-booker.herokuapp.com';
     let bookingId;
     let token;
 
     before(async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .post('/auth')
             .send(userauthdata)
             .set('Accept', 'application/json')
@@ -39,7 +39,7 @@ describe('Restful Booker API Tests', () => {
 
 
     it('should successfully create a booking', async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .post('/booking')
             .send(booking)
             .set('Accept', 'application/json')
@@ -58,7 +58,7 @@ describe('Restful Booker API Tests', () => {
     });
 
     it('should fetch the booking of the provided booking id', async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json');
@@ -74,7 +74,7 @@ describe('Restful Booker API Tests', () => {
     });
 
     it('should update the booking of the provided booking id using Put request', async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .put('/booking/' + bookingId)
             .send(updatedbooking)
             .set('Accept', 'application/json')
@@ -94,7 +94,7 @@ describe('Restful Booker API Tests', () => {
     it('should update the firstname and lastname of booking of the provided booking id', async () => {
         var firstname = 'Michael';
         var lastname = 'Trenor';
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .patch('/booking/' + bookingId)
             .send({ firstname: firstname, lastname: lastname })
             .set('Accept', 'application/json')
@@ -112,7 +112,7 @@ describe('Restful Booker API Tests', () => {
     });
 
     it('should Delete the booking of the provided booking id', async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .delete('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
@@ -122,7 +122,7 @@ describe('Restful Booker API Tests', () => {
     });
 
     it('should show 404 status code for deleted booking id', async () => {
-        const response = await request(baseurl)
+        const response = await request(RESTFUL_BASE_URL)
             .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json');
