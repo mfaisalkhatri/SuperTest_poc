@@ -5,7 +5,7 @@
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+	   http://www.apache.org/licenses/LICENSE-2.0
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,43 +15,36 @@
 */
 
 const request = require('supertest');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 describe('Get API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
-	it('should successfully pass the test for get api with query param', (done) => {
-		request(baseurl)
+	it('should successfully pass the test for get api with query param', async () => {
+		const response = await request(baseurl)
 			.get('/api/users')
 			.query({ page: '2' })
 			.set('Accept', 'application/json')
-			.set('Content-Type', 'application/json')
-			.end(function (err, res) {
-				expect(res.statusCode).to.be.equal(200);
-				expect(res.body.page).to.be.equal(2);
-				expect(res.body.data[0].id).to.be.equal(7);
-				expect(res.body.data[0].first_name).to.be.equal('Michael');
-				done();
-			});
+			.set('Content-Type', 'application/json');
+
+		expect(response.statusCode).to.be.equal(200);
+		expect(response.body.page).to.be.equal(2);
+		expect(response.body.data[0].id).to.be.equal(7);
+		expect(response.body.data[0].first_name).to.be.equal('Michael');
 	});
-	it('should successfully pass the test for get api without query param', (done) => {
-		request(baseurl)
-			.get('/api/users/2')
-			.end(function (err, res) {
-				expect(res.statusCode).to.be.equal(200);
-				expect(res.body.data.id).to.be.equal(2);
-				expect(res.body.data.first_name).to.be.equal('Janet');
-				done();
-			});
+	it('should successfully pass the test for get api without query param', async () => {
+		const response = await request(baseurl).get('/api/users/2');
+
+		expect(response.statusCode).to.be.equal(200);
+		expect(response.body.data.id).to.be.equal(2);
+		expect(response.body.data.first_name).to.be.equal('Janet');
 	});
 
-	it('should successfully pass the test for get api with path param', (done) => {
+	it('should successfully pass the test for get api with path param', async () => {
 		let param = 1;
-		request('https://fakerestapi.azurewebsites.net')
-			.get('/api/v1/Authors/' + param)
-			.end(function (err, res) {
-				expect(res.statusCode).to.be.equal(200);
-				expect(res.body.id).to.be.equal(1);
-				done();
-			});
+		const response = await request('https://fakerestapi.azurewebsites.net')
+			.get('/api/v1/Authors/' + param);
+
+		expect(response.statusCode).to.be.equal(200);
+		expect(response.body.id).to.be.equal(1);
 	});
 });

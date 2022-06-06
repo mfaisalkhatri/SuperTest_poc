@@ -15,152 +15,119 @@
 */
 
 const request = require('supertest');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const booking = require('../testdata/booking.json');
 const userauthdata = require('../testdata/userauthdata.json');
 const updatedbooking = require('../testdata/updatedbooking.json');
 
 describe('Restful Booker API Tests', () => {
     const baseurl = 'https://restful-booker.herokuapp.com';
-    var bookingId;
-    var token;
+    let bookingId;
+    let token;
 
-    before(function(done) {
-        request(baseurl)
+    before(async () => {
+        const response = await request(baseurl)
             .post('/auth')
             .send(userauthdata)
             .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(200);
-                expect(res.body.token).not.to.be.null;
-                token = res.body.token;
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Content-Type', 'application/json');
+
+        expect(response.statusCode).to.be.equal(200);
+        expect(response.body.token).not.to.be.null;
+        token = response.body.token;
     });
 
 
-    it('should successfully create a booking', (done) => {
-        request(baseurl)
+    it('should successfully create a booking', async () => {
+        const response = await request(baseurl)
             .post('/booking')
             .send(booking)
             .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(200);
-                expect(res.body.bookingid).not.to.be.null;
-                expect(res.body.booking.firstname).to.be.equal(booking.firstname);
-                expect(res.body.booking.lastname).to.be.equal(booking.lastname);
-                expect(res.body.booking.totalprice).to.be.equal(booking.totalprice);
-                expect(res.body.booking.depositpaid).to.be.equal(booking.depositpaid);
-                expect(res.body.booking.bookingdates.checkin).to.be.equal(booking.bookingdates.checkin);
-                expect(res.body.booking.bookingdates.checkout).to.be.equal(booking.bookingdates.checkout);
-                expect(res.body.booking.additionalneeds).to.be.equal(booking.additionalneeds);
-                bookingId = res.body.bookingid;
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Content-Type', 'application/json');
+
+        expect(response.statusCode).to.be.equal(200);
+        expect(response.body.bookingid).not.to.be.null;
+        expect(response.body.booking.firstname).to.be.equal(booking.firstname);
+        expect(response.body.booking.lastname).to.be.equal(booking.lastname);
+        expect(response.body.booking.totalprice).to.be.equal(booking.totalprice);
+        expect(response.body.booking.depositpaid).to.be.equal(booking.depositpaid);
+        expect(response.body.booking.bookingdates.checkin).to.be.equal(booking.bookingdates.checkin);
+        expect(response.body.booking.bookingdates.checkout).to.be.equal(booking.bookingdates.checkout);
+        expect(response.body.booking.additionalneeds).to.be.equal(booking.additionalneeds);
+        bookingId = response.body.bookingid;
     });
 
-    it('should fetch the booking of the provided booking id', (done) => {
-        request(baseurl)
+    it('should fetch the booking of the provided booking id', async () => {
+        const response = await request(baseurl)
             .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(200);
-                expect(res.body.firstname).to.be.equal(booking.firstname);
-                expect(res.body.lastname).to.be.equal(booking.lastname);
-                expect(res.body.totalprice).to.be.equal(booking.totalprice);
-                expect(res.body.depositpaid).to.be.equal(booking.depositpaid);
-                expect(res.body.bookingdates.checkin).to.be.equal(booking.bookingdates.checkin);
-                expect(res.body.bookingdates.checkout).to.be.equal(booking.bookingdates.checkout);
-                expect(res.body.additionalneeds).to.be.equal(booking.additionalneeds);
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Content-Type', 'application/json');
+
+        expect(response.statusCode).to.be.equal(200);
+        expect(response.body.firstname).to.be.equal(booking.firstname);
+        expect(response.body.lastname).to.be.equal(booking.lastname);
+        expect(response.body.totalprice).to.be.equal(booking.totalprice);
+        expect(response.body.depositpaid).to.be.equal(booking.depositpaid);
+        expect(response.body.bookingdates.checkin).to.be.equal(booking.bookingdates.checkin);
+        expect(response.body.bookingdates.checkout).to.be.equal(booking.bookingdates.checkout);
+        expect(response.body.additionalneeds).to.be.equal(booking.additionalneeds);
     });
 
-    it('should update the booking of the provided booking id using Put request', (done) => {
-        request(baseurl)
+    it('should update the booking of the provided booking id using Put request', async () => {
+        const response = await request(baseurl)
             .put('/booking/' + bookingId)
             .send(updatedbooking)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
-            .set('Cookie', 'token=' + token)
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(200);
-                expect(res.body.firstname).to.be.equal(updatedbooking.firstname);
-                expect(res.body.lastname).to.be.equal(updatedbooking.lastname);
-                expect(res.body.totalprice).to.be.equal(updatedbooking.totalprice);
-                expect(res.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
-                expect(res.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
-                expect(res.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
-                expect(res.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Cookie', 'token=' + token);
+
+        expect(response.statusCode).to.be.equal(200);
+        expect(response.body.firstname).to.be.equal(updatedbooking.firstname);
+        expect(response.body.lastname).to.be.equal(updatedbooking.lastname);
+        expect(response.body.totalprice).to.be.equal(updatedbooking.totalprice);
+        expect(response.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
+        expect(response.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
+        expect(response.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
+        expect(response.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
     });
 
-    it('should update the firstname and lastname of booking of the provided booking id', (done) => {
+    it('should update the firstname and lastname of booking of the provided booking id', async () => {
         var firstname = 'Michael';
         var lastname = 'Trenor';
-        request(baseurl)
+        const response = await request(baseurl)
             .patch('/booking/' + bookingId)
             .send({ firstname: firstname, lastname: lastname })
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
-            .set('Cookie', 'token=' + token)
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(200);
-                expect(res.body.firstname).to.be.equal(firstname);
-                expect(res.body.lastname).to.be.equal(lastname);
-                expect(res.body.totalprice).to.be.equal(updatedbooking.totalprice);
-                expect(res.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
-                expect(res.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
-                expect(res.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
-                expect(res.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Cookie', 'token=' + token);
+
+        expect(response.statusCode).to.be.equal(200);
+        expect(response.body.firstname).to.be.equal(firstname);
+        expect(response.body.lastname).to.be.equal(lastname);
+        expect(response.body.totalprice).to.be.equal(updatedbooking.totalprice);
+        expect(response.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
+        expect(response.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
+        expect(response.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
+        expect(response.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
     });
 
-    it('should Delete the booking of the provided booking id', (done) => {
-        request(baseurl)
+    it('should Delete the booking of the provided booking id', async () => {
+        const response = await request(baseurl)
             .delete('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
-            .set('Cookie', 'token=' + token)
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(201);
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Cookie', 'token=' + token);
+
+        expect(response.statusCode).to.be.equal(201);
     });
-    it('should show 404 status code for deleted booking id', (done) => {
-        request(baseurl)
+
+    it('should show 404 status code for deleted booking id', async () => {
+        const response = await request(baseurl)
             .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
-            .end(function(err, res) {
-                expect(res.statusCode).to.be.equal(404);
-                if (err) {
-                    throw err;
-                }
-                done();
-            });
+            .set('Content-Type', 'application/json');
+
+        expect(response.statusCode).to.be.equal(404);
     });
+
 });
