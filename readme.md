@@ -28,7 +28,8 @@ npm run install
 
 ### Run Test:
 ```
-npm test
+npm test [ local]
+npm run test:ci [ in pipeline ]
 ```
 
 ### Report folder path:

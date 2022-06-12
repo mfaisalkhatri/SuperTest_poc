@@ -16,10 +16,11 @@
 const request = require('supertest');
 const { expect } = require('chai');
 const { BASE_URL } = require('../constants/urls');
+const endpoint = require('../services/reqres');
 
 describe('Delete API tests using supertest', () => {
 	it('should successfully pass the test for delete request', async () => {
-		const response = await request(BASE_URL).delete('/api/users/2');
+		const response = await request(BASE_URL).delete(endpoint.userByPage(2));
 
 		expect(response.statusCode).to.be.equal(204);
 	});

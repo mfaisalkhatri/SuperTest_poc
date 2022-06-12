@@ -18,11 +18,12 @@ const request = require('supertest');
 const { expect } = require('chai');
 const { BASE_URL } = require('../constants/urls');
 const { user2Payload } = require('../data/payloads');
+const endpoint = require('../services/reqres');
 
 describe('Put API tests using supertest', () => {
 	it('should successfully pass the test for post api', async () => {
 		const response = await request(BASE_URL)
-			.put('/api/users/2')
+			.put(endpoint.userByPage(2))
 			.send(user2Payload)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json');
