@@ -1,0 +1,252 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-12T12:37:34.967Z",
+    "end": "2022-06-12T12:37:44.234Z",
+    "duration": 9267
+  },
+  "tests": [
+    {
+      "title": "should successfully pass the test for delete request",
+      "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\deleteTest.spec.js",
+      "duration": 533,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api with query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 148,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api without query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 127,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api with path param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 605,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for patch request",
+      "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\patchTest.spec.js",
+      "duration": 387,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\postTest.spec.js",
+      "duration": 397,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\putTest.spec.js",
+      "duration": 408,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully create a booking",
+      "fullTitle": "Restful Booker API Tests should successfully create a booking",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 910,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should fetch the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 898,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the booking of the provided booking id using Put request",
+      "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 895,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the firstname and lastname of booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 904,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should Delete the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 1250,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should show 404 status code for deleted booking id",
+      "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 886,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should successfully pass the test for delete request",
+      "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\deleteTest.spec.js",
+      "duration": 533,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api with query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 148,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api without query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 127,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api with path param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\getTest.spec.js",
+      "duration": 605,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for patch request",
+      "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\patchTest.spec.js",
+      "duration": 387,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\postTest.spec.js",
+      "duration": 397,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\putTest.spec.js",
+      "duration": 408,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully create a booking",
+      "fullTitle": "Restful Booker API Tests should successfully create a booking",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 910,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should fetch the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 898,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the booking of the provided booking id using Put request",
+      "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 895,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the firstname and lastname of booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 904,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should Delete the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 1250,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should show 404 status code for deleted booking id",
+      "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
+      "file": "C:\\AutomationProjects\\SuperTest_poc\\test\\specs\\restfulbookerTest.spec.js",
+      "duration": 886,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ]
+}
