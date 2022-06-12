@@ -17,19 +17,19 @@
 const request = require('supertest');
 const { expect } = require('chai');
 const { BASE_URL } = require('../constants/api');
+const { user2Payload } = require('../data/payloads');
 
 describe('Put API tests using supertest', () => {
 	it('should successfully pass the test for post api', async () => {
-		let payload = { name: 'Joseph', job: 'Business Analyst' }
 		const response = await request(BASE_URL)
 			.put('/api/users/2')
-			.send(payload)
+			.send(user2Payload)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json');
 
 		expect(response.statusCode).to.be.equal(200);
-		expect(response.body.name).to.be.equal('Joseph');
-		expect(response.body.job).to.be.equal('Business Analyst');
+		expect(response.body.name).to.be.equal(user2Payload.name);
+		expect(response.body.job).to.be.equal(user2Payload.job);
 		expect(response.body.updatedAt).not.to.be.null;
 	});
 });

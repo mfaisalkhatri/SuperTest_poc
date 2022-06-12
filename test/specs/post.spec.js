@@ -28,8 +28,8 @@ describe('Post API tests using supertest', () => {
 			.set('Content-Type', 'application/json');
 
 		expect(response.statusCode).to.be.equal(201);
-		expect(response.body.name).to.be.equal('Faisal Khatri');
-		expect(response.body.job).to.be.equal('QA');
+		expect(response.body.name).to.be.equal(userdata.name);
+		expect(response.body.job).to.be.equal(userdata.job);
 		expect(response.body.id).not.to.be.null;
 		expect(response.body.createdAt).not.to.be.null;
 	});
