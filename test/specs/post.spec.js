@@ -17,7 +17,7 @@
 const request = require('supertest');
 const { expect } = require('chai');
 const userdata = require('../data/userdata.json');
-const { BASE_URL } = require('../constants/api');
+const { BASE_URL } = require('../constants/urls');
 
 describe('Post API tests using supertest', () => {
 	it('should successfully pass the test for post api', async () => {

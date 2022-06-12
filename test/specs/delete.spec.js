@@ -15,7 +15,7 @@
 */
 const request = require('supertest');
 const { expect } = require('chai');
-const { BASE_URL } = require('../constants/api');
+const { BASE_URL } = require('../constants/urls');
 
 describe('Delete API tests using supertest', () => {
 	it('should successfully pass the test for delete request', async () => {

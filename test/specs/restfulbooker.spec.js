@@ -19,7 +19,7 @@ const { expect } = require('chai');
 const booking = require('../data/booking.json');
 const userauthdata = require('../data/userauthdata.json');
 const updatedbooking = require('../data/updatedbooking.json');
-const { RESTFUL_BASE_URL } = require('../constants/api');
+const { RESTFUL_BASE_URL } = require('../constants/urls');
 
 describe('Restful Booker API Tests', () => {
     let bookingId;

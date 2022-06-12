@@ -16,7 +16,7 @@
 
 const request = require('supertest');
 const { expect } = require('chai');
-const { BASE_URL } = require('../constants/api');
+const { BASE_URL } = require('../constants/urls');
 const { user2Payload } = require('../data/payloads');
 
 describe('Put API tests using supertest', () => {

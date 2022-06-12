@@ -16,7 +16,7 @@
 
 const request = require('supertest');
 const { expect } = require('chai');
-const { BASE_URL, FAKER_BASE_URL } = require('../constants/api');
+const { BASE_URL, FAKER_BASE_URL } = require('../constants/urls');
 
 describe('Get API tests using supertest', () => {
 	it('should successfully pass the test for get api with query param', async () => {
