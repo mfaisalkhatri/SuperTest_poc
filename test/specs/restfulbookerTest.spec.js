@@ -25,12 +25,13 @@ describe('Restful Booker API Tests', () => {
     let bookingId;
     let token;
 
-    before(async () => {
+    before("Generate Token", async () => {
         const response = await request(RESTFUL_BASE_URL)
             .post('/auth')
             .send(userauthdata)
             .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json');
+            .set('Content-Type', 'application/json')
+            .disableTLSCerts();
 
         expect(response.statusCode).to.be.equal(200);
         expect(response.body.token).not.to.be.null;

@@ -20,9 +20,10 @@ const { BASE_URL } = require('../constants/api');
 
 describe('Put API tests using supertest', () => {
 	it('should successfully pass the test for post api', async () => {
+		let payload = { name: 'Joseph', job: 'Business Analyst' }
 		const response = await request(BASE_URL)
 			.put('/api/users/2')
-			.send({ name: 'Joseph', job: 'Business Analyst' })
+			.send(payload)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json');
 

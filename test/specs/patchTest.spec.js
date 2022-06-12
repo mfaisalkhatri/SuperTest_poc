@@ -20,9 +20,10 @@ const { BASE_URL } = require('../constants/api');
 
 describe('Patch API tests using supertest', () => {
 	it('should successfully pass the test for patch request', async () => {
+		let payload = { name: 'Michael', job: 'Tech Lead' }
 		const response = await request(BASE_URL)
 			.patch('/api/users/2')
-			.send({ name: 'Michael', job: 'Tech Lead' })
+			.send(payload)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json');
 
