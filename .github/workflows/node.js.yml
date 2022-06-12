@@ -42,5 +42,5 @@ jobs:
       if: success() || failure()
       with:
           name: Test Results        
-          path: ${{ github.workspace }}/mochawesome-report/mochawesome.json
+          path: ${{ github.workspace }}/reports/test-results.json
           reporter: 'mochawesome'
