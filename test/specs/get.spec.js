@@ -14,27 +14,23 @@
    limitations under the License.
 */
 
-const request = require('supertest');
 const { expect } = require('chai');
 const { BASE_URL, FAKER_BASE_URL } = require('../constants/urls');
 const endpoint = require('../services/reqres');
 const faker_endpoint = require('../services/faker');
+const { getCall } = require('../helper/api');
 
 describe('Get API tests using supertest', () => {
 	it('should successfully pass the test for get api with query param', async () => {
-		const response = await request(BASE_URL)
-			.get(endpoint.allUsers)
-			.query({ page: '2' })
-			.set('Accept', 'application/json')
-			.set('Content-Type', 'application/json');
-
+		const response = await getCall(BASE_URL, endpoint.allUsers, { page: '2' })
+		
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.page).to.be.equal(2);
 		expect(response.body.data[0].id).to.be.equal(7);
 		expect(response.body.data[0].first_name).to.be.equal('Michael');
 	});
 	it('should successfully pass the test for get api without query param', async () => {
-		const response = await request(BASE_URL).get(endpoint.userByPage(2));
+		const response = await getCall(BASE_URL, endpoint.userByPage(2))
 
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.data.id).to.be.equal(2);
@@ -43,7 +39,7 @@ describe('Get API tests using supertest', () => {
 
 	it('should successfully pass the test for get api with path param', async () => {
 		let param = 1;
-		const response = await request(FAKER_BASE_URL).get(faker_endpoint.authors(param));
+		const response = await getCall(FAKER_BASE_URL, faker_endpoint.authors(param))
 
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.id).to.be.equal(param);

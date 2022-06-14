@@ -8,4 +8,9 @@ const user2Payload = {
     job: 'Business Analyst' 
 }
 
-module.exports = { user1Payload, user2Payload }
+const bookerNamePayload =  { 
+    firstname: 'Michael', 
+    lastname: 'Trenor' 
+}
+
+module.exports = { user1Payload, user2Payload, bookerNamePayload }

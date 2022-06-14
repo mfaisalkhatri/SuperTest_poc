@@ -14,19 +14,15 @@
    limitations under the License.
 */
 
-const request = require('supertest');
 const { expect } = require('chai');
 const userdata = require('../data/userdata.json');
 const { BASE_URL } = require('../constants/urls');
 const endpoint = require('../services/reqres');
+const { postCall } = require('../helper/api');
 
 describe('Post API tests using supertest', () => {
 	it('should successfully pass the test for post api', async () => {
-		const response = await request(BASE_URL)
-			.post(endpoint.allUsers)
-			.send(userdata)
-			.set('Accept', 'application/json')
-			.set('Content-Type', 'application/json');
+		const response = await postCall(BASE_URL, endpoint.allUsers, userdata);
 
 		expect(response.statusCode).to.be.equal(201);
 		expect(response.body.name).to.be.equal(userdata.name);

@@ -14,19 +14,15 @@
    limitations under the License.
 */
 
-const request = require('supertest');
 const { expect } = require('chai');
 const { BASE_URL } = require('../constants/urls');
 const { user1Payload } = require('../data/payloads');
 const endpoint = require('../services/reqres');
+const { patchCall } = require('../helper/api');
 
 describe('Patch API tests using supertest', () => {
 	it('should successfully pass the test for patch request', async () => {
-		const response = await request(BASE_URL)
-			.patch(endpoint.userByPage(2))
-			.send(user1Payload)
-			.set('Accept', 'application/json')
-			.set('Content-Type', 'application/json');
+		const response = await patchCall(BASE_URL, endpoint.userByPage(2), user1Payload);
 
 		expect(response.statusCode).to.be.equal(200);
 		expect(response.body.name).to.be.equal(user1Payload.name);

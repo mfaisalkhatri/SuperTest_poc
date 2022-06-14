@@ -13,14 +13,14 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-const request = require('supertest');
 const { expect } = require('chai');
-const { BASE_URL } = require('../constants/urls');
 const endpoint = require('../services/reqres');
+const { deleteCall } = require('../helper/api');
+const { BASE_URL } = require('../constants/urls');
 
 describe('Delete API tests using supertest', () => {
 	it('should successfully pass the test for delete request', async () => {
-		const response = await request(BASE_URL).delete(endpoint.userByPage(2));
+		const response = await deleteCall(BASE_URL, endpoint.userByPage(2));
 
 		expect(response.statusCode).to.be.equal(204);
 	});
