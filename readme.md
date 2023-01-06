@@ -21,26 +21,26 @@ You need to have the following installed in your machine:
 
 1. Node (Latest Version).
 2. npm(Latest Version).
-3. I have used `mocha` framework for writing tests and `chai` for assertions, following command should help to install the required npm packages:
-   `npm i -D supertest mocha chai`
-4. For running the tests, you need to type the command: `npm test`. _(Check Package.json for more details)_
+3. `mocha` framework is used for writing tests and `chai` for assertions, following command should help to install the required npm packages:
+   `npm i -D -g supertest mocha chai mochawesome`
+4. For running the tests, you need to type the command: `npm run test`. _(Check Package.json for more details)_
 5. For generating the mochawesome report, run the command `npm run report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
 
 ## Talking more about the Scenarios Covered in this project:
 
 - I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. You will find the example code in the test folder of the repository.
 
-- End to End scenarios have been added for the restful booker APIs. If you need to get into more details about [how to write tests using supertest,mocha and chai?][mediumblog], this blog is all you need to refer and get started.
+- End to End scenarios have been added for the restful booker APIs. If you need to get into more details about [how to write tests using supertest, mocha and chai?][mediumblog], this blog is all you need to refer and get started.
 
-- Mochawesome reporter is used to generate the reports and show summary of the tests. I found it quite useful report as it shows the test description alongwith the tests and the time taken to run the tests.
+- [Mochawesome reporter][mochawesome-wevbsite] is used to generate the reports and show summary of the tests. I found it quite useful report as it shows the test description alongwith the tests and the time taken to run the tests.
 
 <img src="assets/mochawesome-report.png"/>
 
 ## :question: Need Assistance?
 
-- Discuss your queries by writing to me at [mohammadfaisalkhatri@gmail.com][mail] or you can ping me on the following social media sites:
-- Twitter: [mfaisal_khatri][twitter]
-- LinkedIn: [Mohammad Faisal Khatri][linkedin]
+- Discuss your queries by writing to me @ `mohammadfaisalkhatri@gmail.com`
+  OR ping me on any of the social media sites using the below link:
+    - [Linktree][linktree]
 
 ## :rocket: Trainings and Guidance
 
@@ -54,3 +54,5 @@ You need to have the following installed in your machine:
 [this]: https://www.npmjs.com/package/supertest
 [website]: https://mfaisalkhatri.github.io
 [mediumblog]: https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329
+[mochawesome-wevbsite]: https://www.npmjs.com/package/mochawesome
+[linktree]: https://linktr.ee/faisalkhatri
