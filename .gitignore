@@ -8,3 +8,4 @@
 /.idea/
 *.iml
 /mochawesome-report/
+reports/test-results.json

@@ -12,6 +12,11 @@ on:
     branches:
         - main
         - issue-*
+permissions:
+  statuses: write
+  checks: write
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
