@@ -14,11 +14,12 @@
    limitations under the License.
 */
 
-const request = require('supertest');
-const expect = require('chai').expect;
-const booking = require('../testdata/booking.json');
-const userAuthData = require('../testdata/userauthdata.json');
-const updatedBooking = require('../testdata/updatedbooking.json');
+import request from 'supertest'
+import { expect } from 'chai';
+import booking from '../testdata/booking.json' assert { type: 'json' };
+import userAuthData from '../testdata/userauthdata.json' assert { type: 'json' };
+import updatedBooking from '../testdata/updatedbooking.json' assert { type: 'json' };
+
 
 describe('Restful Booker API Tests', () => {
     const baseurl = 'https://restful-booker.herokuapp.com';
