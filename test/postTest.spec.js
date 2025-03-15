@@ -14,9 +14,9 @@
    limitations under the License.
 */
 
-const request = require('supertest');
-const expect = require('chai').expect;
-const userdata = require('../testdata/userdata.json');
+import request from 'supertest'
+import { expect } from 'chai';
+import userdata from '../testdata/userdata.json' assert { type: 'json' };
 
 describe('Post API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';

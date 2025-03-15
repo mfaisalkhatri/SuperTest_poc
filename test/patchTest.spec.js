@@ -14,8 +14,8 @@
    limitations under the License.
 */
 
-const request = require('supertest');
-const expect = require('chai').expect;
+import request from 'supertest'
+import { expect } from 'chai';
 
 describe('Patch API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';

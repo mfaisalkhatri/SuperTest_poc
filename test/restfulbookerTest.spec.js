@@ -14,11 +14,12 @@
    limitations under the License.
 */
 
-const request = require('supertest');
-const expect = require('chai').expect;
-const booking = require('../testdata/booking.json');
-const userauthdata = require('../testdata/userauthdata.json');
-const updatedbooking = require('../testdata/updatedbooking.json');
+import request from 'supertest'
+import { expect } from 'chai';
+import booking from '../testdata/booking.json' assert { type: 'json' };
+import userAuthData from '../testdata/userauthdata.json' assert { type: 'json' };
+import updatedBooking from '../testdata/updatedbooking.json' assert { type: 'json' };
+
 
 describe('Restful Booker API Tests', () => {
     const baseurl = 'https://restful-booker.herokuapp.com';
@@ -28,7 +29,7 @@ describe('Restful Booker API Tests', () => {
     before(function(done) {
         request(baseurl)
             .post('/auth')
-            .send(userauthdata)
+            .send(userAuthData)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .end(function(err, res) {
@@ -91,19 +92,19 @@ describe('Restful Booker API Tests', () => {
     it('should update the booking of the provided booking id using Put request', (done) => {
         request(baseurl)
             .put('/booking/' + bookingId)
-            .send(updatedbooking)
+            .send(updatedBooking)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .set('Cookie', 'token=' + token)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
-                expect(res.body.firstname).to.be.equal(updatedbooking.firstname);
-                expect(res.body.lastname).to.be.equal(updatedbooking.lastname);
-                expect(res.body.totalprice).to.be.equal(updatedbooking.totalprice);
-                expect(res.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
-                expect(res.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
-                expect(res.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
-                expect(res.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
+                expect(res.body.firstname).to.be.equal(updatedBooking.firstname);
+                expect(res.body.lastname).to.be.equal(updatedBooking.lastname);
+                expect(res.body.totalprice).to.be.equal(updatedBooking.totalprice);
+                expect(res.body.depositpaid).to.be.equal(updatedBooking.depositpaid);
+                expect(res.body.bookingdates.checkin).to.be.equal(updatedBooking.bookingdates.checkin);
+                expect(res.body.bookingdates.checkout).to.be.equal(updatedBooking.bookingdates.checkout);
+                expect(res.body.additionalneeds).to.be.equal(updatedBooking.additionalneeds);
                 if (err) {
                     throw err;
                 }
@@ -124,11 +125,11 @@ describe('Restful Booker API Tests', () => {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.firstname).to.be.equal(firstname);
                 expect(res.body.lastname).to.be.equal(lastname);
-                expect(res.body.totalprice).to.be.equal(updatedbooking.totalprice);
-                expect(res.body.depositpaid).to.be.equal(updatedbooking.depositpaid);
-                expect(res.body.bookingdates.checkin).to.be.equal(updatedbooking.bookingdates.checkin);
-                expect(res.body.bookingdates.checkout).to.be.equal(updatedbooking.bookingdates.checkout);
-                expect(res.body.additionalneeds).to.be.equal(updatedbooking.additionalneeds);
+                expect(res.body.totalprice).to.be.equal(updatedBooking.totalprice);
+                expect(res.body.depositpaid).to.be.equal(updatedBooking.depositpaid);
+                expect(res.body.bookingdates.checkin).to.be.equal(updatedBooking.bookingdates.checkin);
+                expect(res.body.bookingdates.checkout).to.be.equal(updatedBooking.bookingdates.checkout);
+                expect(res.body.additionalneeds).to.be.equal(updatedBooking.additionalneeds);
                 if (err) {
                     throw err;
                 }

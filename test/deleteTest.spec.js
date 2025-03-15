@@ -13,8 +13,9 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-const request = require('supertest');
-const expect = require('chai').expect;
+
+import request from 'supertest'
+import { expect } from 'chai';
 
 describe('Delete API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
