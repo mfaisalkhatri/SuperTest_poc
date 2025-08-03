@@ -16,7 +16,7 @@
 
 import request from 'supertest'
 import { expect } from 'chai';
-import userdata from '../testdata/userdata.json' assert { type: 'json' };
+import userdata from '../testdata/userdata.json' with { type: 'json' };
 
 describe('Post API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
@@ -26,6 +26,7 @@ describe('Post API tests using supertest', () => {
 			.send(userdata)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
+			.set('x-api-key', 'reqres-free-v1')
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(201);
 				expect(res.body.name).to.be.equal('Faisal Khatri');

@@ -25,6 +25,7 @@ describe('Put API tests using supertest', () => {
 			.send({ name: 'Joseph', job: 'Business Analyst' })
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
+			.set('x-api-key', 'reqres-free-v1')
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.name).to.be.equal('Joseph');
