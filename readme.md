@@ -1,6 +1,5 @@
 # API Testing using SuperTest, Mocha and Chai
 
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Node.js CI](https://github.com/mfaisalkhatri/SuperTest_poc/actions/workflows/node.js.yml/badge.svg)](https://github.com/mfaisalkhatri/SuperTest_poc/actions/workflows/node.js.yml)
 

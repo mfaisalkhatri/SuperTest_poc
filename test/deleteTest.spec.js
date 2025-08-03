@@ -24,6 +24,7 @@ describe('Delete API tests using supertest', () => {
 			.delete('/api/users/2')
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
+			.set('x-api-key', 'reqres-free-v1')
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(204);
 				done();

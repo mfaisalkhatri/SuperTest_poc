@@ -16,9 +16,9 @@
 
 import request from 'supertest'
 import { expect } from 'chai';
-import booking from '../testdata/booking.json' assert { type: 'json' };
-import userAuthData from '../testdata/userauthdata.json' assert { type: 'json' };
-import updatedBooking from '../testdata/updatedbooking.json' assert { type: 'json' };
+import booking from '../testdata/booking.json' with { type: 'json' };
+import userAuthData from '../testdata/userauthdata.json' with { type: 'json' };
+import updatedBooking from '../testdata/updatedbooking.json' with { type: 'json' };
 
 
 describe('Restful Booker API Tests', () => {

@@ -5,16 +5,16 @@
     "passes": 13,
     "pending": 0,
     "failures": 0,
-    "start": "2025-03-15T14:15:38.823Z",
-    "end": "2025-03-15T14:15:46.047Z",
-    "duration": 7224
+    "start": "2025-08-03T12:46:29.956Z",
+    "end": "2025-08-03T12:46:37.140Z",
+    "duration": 7184
   },
   "tests": [
     {
       "title": "should successfully pass the test for delete request",
       "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/deleteTest.spec.js",
-      "duration": 368,
+      "duration": 318,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -23,7 +23,7 @@
       "title": "should successfully pass the test for get api with query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 271,
+      "duration": 257,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -32,7 +32,7 @@
       "title": "should successfully pass the test for get api without query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 275,
+      "duration": 283,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -41,7 +41,7 @@
       "title": "should successfully pass the test for get api with path param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 487,
+      "duration": 470,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -50,7 +50,7 @@
       "title": "should successfully pass the test for patch request",
       "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/patchTest.spec.js",
-      "duration": 361,
+      "duration": 294,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -59,7 +59,7 @@
       "title": "should successfully pass the test for post api",
       "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/postTest.spec.js",
-      "duration": 379,
+      "duration": 297,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -68,7 +68,7 @@
       "title": "should successfully pass the test for post api",
       "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/putTest.spec.js",
-      "duration": 371,
+      "duration": 311,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -77,7 +77,7 @@
       "title": "should successfully create a booking",
       "fullTitle": "Restful Booker API Tests should successfully create a booking",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 652,
+      "duration": 796,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -86,7 +86,7 @@
       "title": "should fetch the booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 660,
+      "duration": 680,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -95,7 +95,7 @@
       "title": "should update the booking of the provided booking id using Put request",
       "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 678,
+      "duration": 702,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -104,7 +104,7 @@
       "title": "should update the firstname and lastname of booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 710,
+      "duration": 672,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -113,7 +113,7 @@
       "title": "should Delete the booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 698,
+      "duration": 695,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -122,7 +122,7 @@
       "title": "should show 404 status code for deleted booking id",
       "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 666,
+      "duration": 699,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -135,7 +135,7 @@
       "title": "should successfully pass the test for delete request",
       "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/deleteTest.spec.js",
-      "duration": 368,
+      "duration": 318,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -144,7 +144,7 @@
       "title": "should successfully pass the test for get api with query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 271,
+      "duration": 257,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -153,7 +153,7 @@
       "title": "should successfully pass the test for get api without query param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 275,
+      "duration": 283,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -162,7 +162,7 @@
       "title": "should successfully pass the test for get api with path param",
       "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/getTest.spec.js",
-      "duration": 487,
+      "duration": 470,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -171,7 +171,7 @@
       "title": "should successfully pass the test for patch request",
       "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/patchTest.spec.js",
-      "duration": 361,
+      "duration": 294,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -180,7 +180,7 @@
       "title": "should successfully pass the test for post api",
       "fullTitle": "Post API tests using supertest should successfully pass the test for post api",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/postTest.spec.js",
-      "duration": 379,
+      "duration": 297,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -189,7 +189,7 @@
       "title": "should successfully pass the test for post api",
       "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/putTest.spec.js",
-      "duration": 371,
+      "duration": 311,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -198,7 +198,7 @@
       "title": "should successfully create a booking",
       "fullTitle": "Restful Booker API Tests should successfully create a booking",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 652,
+      "duration": 796,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -207,7 +207,7 @@
       "title": "should fetch the booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 660,
+      "duration": 680,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -216,7 +216,7 @@
       "title": "should update the booking of the provided booking id using Put request",
       "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 678,
+      "duration": 702,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -225,7 +225,7 @@
       "title": "should update the firstname and lastname of booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 710,
+      "duration": 672,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -234,7 +234,7 @@
       "title": "should Delete the booking of the provided booking id",
       "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 698,
+      "duration": 695,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}
@@ -243,7 +243,7 @@
       "title": "should show 404 status code for deleted booking id",
       "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
       "file": "/Users/faisalkhatri/Github/SuperTest_poc/test/restfulbookerTest.spec.js",
-      "duration": 666,
+      "duration": 699,
       "currentRetry": 0,
       "speed": "slow",
       "err": {}

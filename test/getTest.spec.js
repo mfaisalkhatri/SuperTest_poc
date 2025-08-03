@@ -25,6 +25,7 @@ describe('Get API tests using supertest', () => {
 			.query({ page: '2' })
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
+			.set('x-api-key', 'reqres-free-v1')
 			.end(function (err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.page).to.be.equal(2);
