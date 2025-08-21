@@ -22,11 +22,11 @@ describe('Post API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for post api', (done) => {
 		request(baseurl)
-			.post('/api/users')
-			.send(userdata)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
 			.set('x-api-key', 'reqres-free-v1')
+			.post('/api/users')
+			.send(userdata)
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(201);
 				expect(res.body.name).to.be.equal('Faisal Khatri');
