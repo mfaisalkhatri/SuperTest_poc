@@ -22,10 +22,10 @@ describe('Get API tests using supertest', () => {
 	it('should successfully pass the test for get api with query param', (done) => {
 		request(baseurl)
 			.get('/api/users')
-			.query({ page: '2' })
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
 			.set('x-api-key', 'reqres-free-v1')
+			.query({ page: '2' })
 			.end(function (err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.page).to.be.equal(2);
@@ -37,6 +37,7 @@ describe('Get API tests using supertest', () => {
 	it('should successfully pass the test for get api without query param', (done) => {
 		request(baseurl)
 			.get('/api/users/2')
+			.set('x-api-key', 'reqres-free-v1')
 			.end(function (err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.data.id).to.be.equal(2);

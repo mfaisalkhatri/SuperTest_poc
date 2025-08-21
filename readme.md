@@ -8,11 +8,11 @@
 ## What is it all about?
 
 I have been using Rest-Assured framework all the time for testing APIs with Java. But this time it was my project's demand to perform API testing in Javascript.
-Being a newbie to JS, I googled for some tools and found `SuperTest`.
-To introduce `SuperTest`, it is a high level abstraction of HTTP requests, making it perfect for testing APIs.
+Being a newbie to JS, I googled for some tools and found _**SuperTest**_.
+To introduce _**SuperTest**_, it is a high level abstraction of HTTP requests, making it perfect for testing APIs.
 I decided to do a POC of this tool to understand it better, hence this project was created.
 I thought of sharing this on github, so it helps others as well who want to learn more about this tool.
-_Checkout [this][] link to learn more about `SuperTest`_
+_Checkout [this](https://www.npmjs.com/package/supertest) link to learn more about `SuperTest`_
 
 ## Getting Started:
 
