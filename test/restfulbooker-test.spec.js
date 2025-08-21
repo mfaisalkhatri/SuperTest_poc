@@ -28,10 +28,10 @@ describe('Restful Booker API Tests', () => {
 
     before(function(done) {
         request(baseurl)
-            .post('/auth')
-            .send(userAuthData)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
+            .post('/auth')
+            .send(userAuthData)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.token).not.to.be.null;
@@ -46,10 +46,10 @@ describe('Restful Booker API Tests', () => {
 
     it('should successfully create a booking', (done) => {
         request(baseurl)
-            .post('/booking')
-            .send(booking)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
+            .post('/booking')
+            .send(booking)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.bookingid).not.to.be.null;
@@ -70,9 +70,9 @@ describe('Restful Booker API Tests', () => {
 
     it('should fetch the booking of the provided booking id', (done) => {
         request(baseurl)
-            .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
+            .get('/booking/' + bookingId)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.firstname).to.be.equal(booking.firstname);
@@ -91,11 +91,11 @@ describe('Restful Booker API Tests', () => {
 
     it('should update the booking of the provided booking id using Put request', (done) => {
         request(baseurl)
-            .put('/booking/' + bookingId)
-            .send(updatedBooking)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .set('Cookie', 'token=' + token)
+            .put('/booking/' + bookingId)
+            .send(updatedBooking)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.firstname).to.be.equal(updatedBooking.firstname);
@@ -116,11 +116,11 @@ describe('Restful Booker API Tests', () => {
         var firstname = 'Michael';
         var lastname = 'Trenor';
         request(baseurl)
-            .patch('/booking/' + bookingId)
-            .send({ firstname: firstname, lastname: lastname })
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .set('Cookie', 'token=' + token)
+            .patch('/booking/' + bookingId)
+            .send({ firstname: firstname, lastname: lastname })
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.firstname).to.be.equal(firstname);
@@ -139,10 +139,10 @@ describe('Restful Booker API Tests', () => {
 
     it('should Delete the booking of the provided booking id', (done) => {
         request(baseurl)
-            .delete('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
             .set('Cookie', 'token=' + token)
+            .delete('/booking/' + bookingId)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(201);
                 if (err) {
@@ -153,9 +153,9 @@ describe('Restful Booker API Tests', () => {
     });
     it('should show 404 status code for deleted booking id', (done) => {
         request(baseurl)
-            .get('/booking/' + bookingId)
             .set('Accept', 'application/json')
             .set('Content-Type', 'application/json')
+            .get('/booking/' + bookingId)
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(404);
                 if (err) {
