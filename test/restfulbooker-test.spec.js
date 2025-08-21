@@ -28,10 +28,10 @@ describe('Restful Booker API Tests', () => {
 
     before(function(done) {
         request(baseurl)
-            .set('Accept', 'application/json')
-            .set('Content-Type', 'application/json')
             .post('/auth')
             .send(userAuthData)
+            .set('Accept', 'application/json')
+            .set('Content-Type', 'application/json')
             .end(function(err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 expect(res.body.token).not.to.be.null;
