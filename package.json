@@ -1,7 +1,7 @@
 {
 	"name": "supertest_poc",
 	"version": "1.0.0",
-	"description": "This is a POC for supertest framework for api testing",
+	"description": "This is a POC for supertest framework for API testing",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
