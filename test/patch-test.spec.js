@@ -21,11 +21,11 @@ describe('Patch API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for patch request', (done) => {
 		request(baseurl)
-			.set('Accept', 'application/json')
-			.set('Content-Type', 'application/json')
-			.set('x-api-key', 'reqres-free-v1')
 			.patch('/api/users/2')
 			.send({ name: 'Michael', job: 'Tech Lead' })
+			.set('Accept', 'application/json')
+			.set('Content-Type', 'application/json')
+			.set('x-api-key', 'reqres-free-v1')			
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.name).to.be.equal('Michael');

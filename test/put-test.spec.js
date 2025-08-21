@@ -21,11 +21,11 @@ describe('Put API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for post api', (done) => {
 		request(baseurl)
+			.put('/api/users/2')
+			.send({ name: 'Joseph', job: 'Business Analyst' })
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/json')
 			.set('x-api-key', 'reqres-free-v1')
-			.put('/api/users/2')
-			.send({ name: 'Joseph', job: 'Business Analyst' })
 			.end(function(err, res) {
 				expect(res.statusCode).to.be.equal(200);
 				expect(res.body.name).to.be.equal('Joseph');
