@@ -29,9 +29,9 @@ You need to have the following installed in your machine:
 
 - I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. You will find the example code in the test folder of the repository.
 
-- End to End scenarios have been added for the restful booker APIs. If you need to get into more details about [how to write tests using supertest, mocha and chai?][mediumblog], this blog is all you need to refer and get started.
+- End to End scenarios have been added for the restful booker APIs. Check out [API Testing with superTest](https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329) for more details.
 
-- [Mochawesome reporter][mochawesome-wevbsite] is used to generate the reports and show summary of the tests. I found it quite useful report as it shows the test description alongwith the tests and the time taken to run the tests.
+- [Mochawesome reporter](https://www.npmjs.com/package/mochawesome) is used to generate the reports and show summary of the tests. I found it quite useful report as it shows the test description along with the tests and the time taken to run the tests.
 
 <img src="assets/mochawesome-report.png"/>
 
@@ -39,19 +39,15 @@ You need to have the following installed in your machine:
 
 - Discuss your queries by writing to me @ `mohammadfaisalkhatri@gmail.com`
   OR ping me on any of the social media sites using the below link:
-    - [Linktree][linktree]
+    - [Linktree](https://linktr.ee/faisalkhatri)
 
-## :rocket: Trainings and Guidance
+## :computer: Paid Trainings
 
-- Contact me for 1:1 trainings/guidance for Software Testing, Mock Interviews, Test Automation tools queries, Mentoring and Coaching.
+- Contact me for Paid trainings related to Test Automation and Software Testing,
+  mail me @ `mohammadfaisalkhatri@gmail.com` or ping me on [LinkedIn](https://www.linkedin.com/in/faisalkhatri/)
 
-## :thought_balloon: Checkout the blogs related to Software Testing on my [website][]
+## :thought_balloon: Checkout the blogs related to Testing written by me on the following links:
 
-[mail]: mohammadfaisalkhatri@gmail.com
-[linkedin]: https://www.linkedin.com/in/faisalkhatri/
-[twitter]: https://twitter.com/mfaisal_khatri
-[this]: https://www.npmjs.com/package/supertest
-[website]: https://mfaisalkhatri.github.io
-[mediumblog]: https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329
-[mochawesome-wevbsite]: https://www.npmjs.com/package/mochawesome
-[linktree]: https://linktr.ee/faisalkhatri
+- [Medium Blogs](https://medium.com/@iamfaisalkhatri)
+- [LambdaTest Blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
+- [My Website](https://mfaisalkhatri.github.io)
