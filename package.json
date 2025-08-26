@@ -14,7 +14,7 @@
 	"author": "Faisal Khatri",
 	"license": "ISC",
 	"devDependencies": {
-		"chai": "^5.3.1",
+		"chai": "^6.0.1",
 		"mocha": "^11.7.1",
 		"supertest": "^7.1.4"
 	},
