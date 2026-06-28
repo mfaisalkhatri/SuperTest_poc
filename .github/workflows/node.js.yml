@@ -36,7 +36,7 @@ jobs:
       run: npm ci
 
     - name: Clean old reports
-      run: rm -rf reports/*
+      run: rm -rf reports/test-results.json
 
     - name: Start Restful E-commerce using Docker Compose
       run: docker compose -f docker-compose-ecommerce.yml up -d
