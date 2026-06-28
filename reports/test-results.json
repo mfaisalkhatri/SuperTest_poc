@@ -1,0 +1,353 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 14,
+    "passes": 8,
+    "pending": 0,
+    "failures": 6,
+    "start": "2026-06-28T13:20:53.846Z",
+    "end": "2026-06-28T13:21:02.422Z",
+    "duration": 8576
+  },
+  "tests": [
+    {
+      "title": "should create new order using JSON file payload",
+      "fullTitle": "Post API tests using supertest should create new order using JSON file payload",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\1-post-test.spec.js",
+      "duration": 28,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 46 to equal 4\n    at Context.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/1-post-test.spec.js:29:45)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "message": "expected 46 to equal 4",
+        "actual": "46",
+        "expected": "4",
+        "showDiff": true,
+        "operator": "strictEqual"
+      }
+    },
+    {
+      "title": "should create new order using static data",
+      "fullTitle": "Post API tests using supertest should create new order using static data",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\1-post-test.spec.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for delete request",
+      "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\delete-test.spec.js",
+      "duration": 451,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 204\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/delete-test.spec.js:29:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 204",
+        "actual": "401",
+        "expected": "204",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for get api with query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 411,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/get-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for get api without query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 459,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/get-test.spec.js:42:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for get api with path param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 587,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for patch request",
+      "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\patch-test.spec.js",
+      "duration": 431,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/patch-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\put-test.spec.js",
+      "duration": 399,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/put-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully create a booking",
+      "fullTitle": "Restful Booker API Tests should successfully create a booking",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 804,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should fetch the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 797,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the booking of the provided booking id using Put request",
+      "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 814,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the firstname and lastname of booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 805,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should Delete the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 838,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should show 404 status code for deleted booking id",
+      "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 790,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "should create new order using JSON file payload",
+      "fullTitle": "Post API tests using supertest should create new order using JSON file payload",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\1-post-test.spec.js",
+      "duration": 28,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 46 to equal 4\n    at Context.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/1-post-test.spec.js:29:45)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+        "message": "expected 46 to equal 4",
+        "actual": "46",
+        "expected": "4",
+        "showDiff": true,
+        "operator": "strictEqual"
+      }
+    },
+    {
+      "title": "should successfully pass the test for delete request",
+      "fullTitle": "Delete API tests using supertest should successfully pass the test for delete request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\delete-test.spec.js",
+      "duration": 451,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 204\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/delete-test.spec.js:29:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 204",
+        "actual": "401",
+        "expected": "204",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for get api with query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with query param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 411,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/get-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for get api without query param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api without query param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 459,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/get-test.spec.js:42:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for patch request",
+      "fullTitle": "Patch API tests using supertest should successfully pass the test for patch request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\patch-test.spec.js",
+      "duration": 431,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/patch-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    },
+    {
+      "title": "should successfully pass the test for post api",
+      "fullTitle": "Put API tests using supertest should successfully pass the test for post api",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\put-test.spec.js",
+      "duration": 399,
+      "currentRetry": 0,
+      "err": {
+        "stack": "AssertionError: expected 401 to equal 200\n    at Test.<anonymous> (file:///C:/faisalkhatri/GitHub/SuperTest_poc/test/put-test.spec.js:30:34)\n    at Test.assert (node_modules\\supertest\\lib\\test.js:204:10)\n    at localAssert (node_modules\\supertest\\lib\\test.js:138:14)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\supertest\\lib\\test.js:156:7\n    at Request.callback (node_modules\\superagent\\lib\\node\\index.js:857:3)\n    at C:\\faisalkhatri\\GitHub\\SuperTest_poc\\node_modules\\superagent\\lib\\node\\index.js:1102:18\n    at IncomingMessage.<anonymous> (node_modules\\superagent\\lib\\node\\parsers\\json.js:21:7)\n    at IncomingMessage.emit (node:events:530:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+        "message": "expected 401 to equal 200",
+        "actual": "401",
+        "expected": "200",
+        "showDiff": true,
+        "operator": "strictEqual",
+        "uncaught": true
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "should create new order using static data",
+      "fullTitle": "Post API tests using supertest should create new order using static data",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\1-post-test.spec.js",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should successfully pass the test for get api with path param",
+      "fullTitle": "Get API tests using supertest should successfully pass the test for get api with path param",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\get-test.spec.js",
+      "duration": 587,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should successfully create a booking",
+      "fullTitle": "Restful Booker API Tests should successfully create a booking",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 804,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should fetch the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should fetch the booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 797,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the booking of the provided booking id using Put request",
+      "fullTitle": "Restful Booker API Tests should update the booking of the provided booking id using Put request",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 814,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should update the firstname and lastname of booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should update the firstname and lastname of booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 805,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should Delete the booking of the provided booking id",
+      "fullTitle": "Restful Booker API Tests should Delete the booking of the provided booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 838,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should show 404 status code for deleted booking id",
+      "fullTitle": "Restful Booker API Tests should show 404 status code for deleted booking id",
+      "file": "C:\\faisalkhatri\\GitHub\\SuperTest_poc\\test\\restfulbooker-test.spec.js",
+      "duration": 790,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    }
+  ]
+}
