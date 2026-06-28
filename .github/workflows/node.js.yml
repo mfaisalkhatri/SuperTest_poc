@@ -54,8 +54,8 @@ jobs:
     - name: Start Restful E-commerce using Docker Compose
       run: docker compose -f docker-compose-ecommerce.yml up -d
 
-    - name: Wait for service to be available
-      run: npx wait-on http://localhost:3004 &
+    - name: Wait until API is ready
+      run: npx wait-on http://localhost:3004/health
 
     - name: Run Tests
       run: npm test
