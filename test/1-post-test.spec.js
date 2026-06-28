@@ -16,7 +16,6 @@
 
 import request from 'supertest'
 import { expect } from 'chai';
-//import userdata from '../testdata/userdata.json' with { type: 'json' };
 import orders from '../testdata/orders.json' with { type: 'json' };
 
 describe('Post API tests using supertest', () => {

@@ -43,14 +43,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Create .env from secrets
-      run: |
-        cat > .env <<'EOF'
-        AUTH_USERNAME=${{ secrets.AUTH_USERNAME }}
-        AUTH_PASSWORD=${{ secrets.AUTH_PASSWORD }}
-        SECRET_KEY=${{ secrets.SECRET_KEY }}
-        EOF
-
+    - name: Clean old reports
+      run: rm -rf reports
+      
     - name: Start Restful E-commerce using Docker Compose
       run: docker compose -f docker-compose-ecommerce.yml up -d
 
