@@ -55,7 +55,7 @@ jobs:
       run: docker compose -f docker-compose-ecommerce.yml up -d
 
     - name: Wait until API is ready
-      run: npx wait-on http://localhost:3004/health
+      run: npx wait-on --timeout 60000 --interval 5000 http://localhost:3004/health
 
     - name: Run Tests
       run: npm test

@@ -6,8 +6,3 @@ services:
     image: mfaisalkhatri/restful-ecommerce-app
     ports:
       - 3004:3004
-    env_file:
-      - .env
-    volumes:
-      - ./:/app
-    working_dir: /app
