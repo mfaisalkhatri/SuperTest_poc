@@ -47,6 +47,10 @@ jobs:
     - name: Run Tests
       run: npm run test-and-generate-json-report
 
+    - name: List reports directory
+      run: |
+        ls -la reports
+
     - name: Stop the service
       if: always()
       run: docker compose -f docker-compose-ecommerce.yml down --remove-orphans
