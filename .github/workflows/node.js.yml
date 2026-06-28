@@ -35,8 +35,16 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: List reports directory
+      run: |
+        ls -la reports
+
     - name: Clean old reports
       run: rm -rf reports/test-results.json
+
+    - name: List reports directory
+      run: |
+        ls -la reports
 
     - name: Start Restful E-commerce using Docker Compose
       run: docker compose -f docker-compose-ecommerce.yml up -d
