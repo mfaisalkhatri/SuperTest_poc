@@ -16,18 +16,18 @@ _Checkout [this](https://www.npmjs.com/package/supertest) link to learn more abo
 
 ## Getting Started:
 
-You need to have the following installed in your machine:
+You need to have the following installed on your machine:
 
-1. Node (Latest Version).
+1. Node(Latest Version).
 2. npm(Latest Version).
 3. `mocha` framework is used for writing tests and `chai` for assertions, following command should help to install the required npm packages:
    `npm i -D -g supertest mocha chai mochawesome`
 4. For running the tests, you need to type the command: `npm run test`. _(Check Package.json for more details)_
-5. For generating the mochawesome report, run the command `npm run report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
+5. For generating the mochawesome report, run the command `npm run html-report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
 
 ## Talking more about the Scenarios Covered in this project:
 
-- I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. You will find the example code in the test folder of the repository.
+- I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. The example code is available in the test folder of the repository.
 
 - End to End scenarios have been added for the restful booker APIs. Check out [API Testing with superTest](https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329) for more details.
 
@@ -46,8 +46,9 @@ You need to have the following installed in your machine:
 - Contact me for Paid trainings related to Test Automation and Software Testing,
   mail me @ `mohammadfaisalkhatri@gmail.com` or ping me on [LinkedIn](https://www.linkedin.com/in/faisalkhatri/)
 
-## :thought_balloon: Checkout the blogs related to Testing written by me on the following links:
+## :thought_balloon: Checkout the Software Testing Tutorials, articles and Videos:
 
-- [Medium Blogs](https://medium.com/@iamfaisalkhatri)
-- [LambdaTest Blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
-- [My Website](https://mfaisalkhatri.github.io)
+- [Medium](https://medium.com/@iamfaisalkhatri)
+- [YouTube](https://www.youtube.com/@faisalkhatriqa)
+- [DZone](https://dzone.com/authors/mfaisalkhatri)
+
