@@ -23,13 +23,17 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      AUTH_USERNAME: ${{secrets.AUTH_USERNAME}}
+      AUTH_PASSWORD: ${{secrets.AUTH_PASSWORD}}
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
+
     strategy:
       matrix:
         node-version: [20.x,22.x,24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v6
       with:
@@ -38,8 +42,27 @@ jobs:
     
     - name: Install dependencies
       run: npm ci
+
+    - name: Create .env from secrets
+      run: |
+        cat > .env <<'EOF'
+        AUTH_USERNAME=${{ secrets.AUTH_USERNAME }}
+        AUTH_PASSWORD=${{ secrets.AUTH_PASSWORD }}
+        SECRET_KEY=${{ secrets.SECRET_KEY }}
+        EOF
+
+    - name: Start Restful E-commerce using Docker Compose
+      run: docker compose -f docker-compose-ecommerce.yml up -d
+
+    - name: Wait for service to be available
+      run: npx wait-on http://localhost:3004 &
+
     - name: Run Tests
       run: npm test
+
+    - name: Stop the service
+      if: always()
+      run: docker compose -f docker-compose-ecommerce.yml down --remove-orphans
     
     - name: Test Report
       uses: dorny/test-reporter@v3
