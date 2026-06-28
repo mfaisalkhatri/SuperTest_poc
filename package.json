@@ -5,8 +5,9 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha **/*.spec.js && mocha --reporter json > reports/test-results.json",
-		"report": "mocha --reporter mochawesome"
+		"test": "mocha **/*.spec.js",
+		"test-and-generate-json-report": "mocha --reporter json > reports/test-results.json",
+		"html-report": "mocha --reporter mochawesome"
 	},
 	"keywords": [
 		"supertest"
