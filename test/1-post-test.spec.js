@@ -19,8 +19,13 @@ import { expect } from "chai";
 import orders from "../testdata/orders.json" with { type: "json" };
 import authCredentials from "../testdata/auth_credentials.json" with { type: "json" };
 import fs from "node:fs";
-import Path from 'path';
-import { dirname } from 'path';
+import Path from "path";
+import { dirname } from "path";
+import {
+  buildMultipleOrders,
+  buildOrder,
+  buildOrdersFrom,
+} from "../utils/OrderFactory.js";
 
 describe("Post API tests using supertest", () => {
   const baseurl = "http://localhost:3004";
@@ -145,5 +150,96 @@ describe("Post API tests using supertest", () => {
     expect(response.body.file.size).to.not.be.null;
   });
 
-  it("should send the request using Builder Pattern with DataFaker", async () => {});
+  it("should post url-encoded request payload", async () => {
+    const userDetails = {
+      firstname: "Faisal",
+      lastname: "Khatri",
+      position: "QA",
+      projecturl: "https://github.com/mfaisalkhatri/SuperTest_poc",
+    };
+    let response = await request("http://localhost:80")
+      .post("/post")
+      .set("Content-Type", "application/x-www-form-urlencoded")
+      .type("form")
+      .send(userDetails)
+      .expect(200);
+    expect(response.body.form.firstname).to.be.equal(userDetails.firstname);
+    expect(response.body.form.lastname).to.be.equal(userDetails.lastname);
+    expect(response.body.form.position).to.be.equal(userDetails.position);
+    expect(response.body.form.projecturl).to.be.equal(userDetails.projecturl);
+  });
+
+  it("should post raw text request payload", async () => {
+    const rawRequest = "Hello, in plain text!";
+
+    let response = await request("http://localhost:80")
+      .post("/post")
+      .set("Content-Type", "text/plain")
+      .send(rawRequest)
+      .expect(200);
+    expect(response.body.data).to.be.equal(rawRequest);
+  });
+
+  it("should post xml request payload", async () => {
+    const xmlRequest = `<?xml version="1.0" encoding="UTF-8"?> <user> <id>101</id> <name>John Doe</name> <email>john@example.com</email> <role>Admin</role> </user>`;
+
+    let response = await request("http://localhost:80")
+      .post("/post")
+      .set("Content-Type", "application/xml")
+      .set("Accept", "application/xml")
+      .send(xmlRequest)
+      .expect(200);
+
+    expect(response.body.data).to.be.equal(xmlRequest);
+  });
+  it("should generate single order using builder pattern with Datafaker", async () => {
+    const orders = [buildOrder()];
+    let response = await request(baseurl)
+      .post("/addOrder")
+      .send(orders)
+      .expect(201);
+    expect(response.body.orders[11].user_id).to.be.equal(orders[0].user_id);
+    expect(response.body.orders[11].product_name).to.be.equal(
+      orders[0].product_name,
+    );
+  });
+
+  it("should send the request using Builder Pattern with DataFaker", async () => {
+    const orders = buildMultipleOrders(5);
+    let response = await request(baseurl)
+      .post("/addOrder")
+      .send(orders)
+      .expect(201);
+    expect(response.body.orders[13].user_id).to.be.equal(orders[1].user_id);
+    expect(response.body.orders[13].product_name).to.be.equal(
+      orders[1].product_name,
+    );
+  });
+
+  it("should generate single order using builder pattern with custom values", async () => {
+    const orders = buildOrdersFrom([
+      {
+        product_name: "iPhone",
+        product_amount: 500,
+      },
+      {
+        product_name: "iPad",
+        product_amount: 699,
+      },
+      {
+        product_name: "MacBook",
+        product_amount: 1999,
+      },
+    ]);
+    let response = await request(baseurl)
+      .post("/addOrder")
+      .send(orders)
+      .expect(201);
+    expect(response.body.orders[18].product_name).to.be.equal(
+      orders[1].product_name,
+    );
+    expect(response.body.orders[18].product_amount).to.be.equal(
+      orders[1].product_amount,
+    );
+  });
 });

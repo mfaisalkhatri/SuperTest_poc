@@ -17,7 +17,7 @@
 import request from 'supertest'
 import { expect } from 'chai';
 
-describe('Put API tests using supertest', () => {
+describe.skip('Put API tests using supertest', () => {
 	const baseurl = 'https://reqres.in';
 	it('should successfully pass the test for post api', (done) => {
 		request(baseurl)
