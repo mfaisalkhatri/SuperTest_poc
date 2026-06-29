@@ -17,9 +17,13 @@
 import request from "supertest";
 import { expect } from "chai";
 import orders from "../testdata/orders.json" with { type: "json" };
+import authCredentials from "../testdata/auth_credentials.json" with { type: "json" };
+import fs from "node:fs";
 
 describe("Post API tests using supertest", () => {
   const baseurl = "http://localhost:3004";
+  let token;
+
   it("should create new order using JSON file payload", async () => {
     let response = await request(baseurl).post("/addOrder").send(orders);
 
@@ -34,7 +38,7 @@ describe("Post API tests using supertest", () => {
     expect(response.body.orders[1].total_amt).to.be.equal(706.99);
   });
 
-  it("should create new order using static data", async () => {
+  it("should create new orders using static data", async () => {
     await request(baseurl)
       .post("/addOrder")
       .set("Accept", "application/json")
@@ -74,4 +78,69 @@ describe("Post API tests using supertest", () => {
         });
       });
   });
+
+  it("should create new orders using static data from a variable", async () => {
+    const order_details = [
+      {
+        user_id: "5",
+        product_id: "7",
+        product_name: "Lux Beauty Soap",
+        product_amount: 9,
+        qty: 1,
+        tax_amt: 1,
+        total_amt: 10,
+      },
+      {
+        user_id: "5",
+        product_id: "9",
+        product_name: "Loreal Shampoo",
+        product_amount: 12,
+        qty: 3,
+        tax_amt: 4,
+        total_amt: 40,
+      },
+    ];
+
+    await request(baseurl).post("/addOrder").send(order_details).expect(201);
+  });
+
+  it("should read the request payload from JSON file dynamically", async () => {
+    const requestBody = JSON.parse(
+      fs.readFileSync("../testdata/more_orders.json", "utf-8"),
+    );
+
+    await request(baseurl)
+      .post("/addOrder")
+      .send(requestBody)
+      .expect(201)
+      .expect((res) => {
+        expect(res.body.message).to.be.equal("Orders added successfully!");
+      });
+  });
+
+  it("should generate the valid token", async () => {
+    let response = await request(baseurl).post("/auth").send(authCredentials);
+
+    expect(response.statusCode).to.be.equal(201);
+    expect(response.body.message).to.be.equal("Authentication Successful!");
+    expect(response.body.token).not.to.be.null;
+    token = response.body.token;
+  });
+
+  it("should upload an image and return status code 200", async () => {
+    const filePath = Path.join(__dirname, "/testdata/sample_image.png");
+
+    let response = await request(baseurl)
+      .post("/imageUpload")
+      .attach("image", filePath)
+      .set("Authorization", token);
+
+    expect(response.statusCode).to.be.equal(200);
+    expect(response.body.message).to.be.equal("File uploaded successfully!");
+    expect(response.body.file.originalName).to.be.equal("sample_image.png");
+    expect(response.body.file.path).to.include("uploads/");
+    expect(response.body.file.size).to.not.be.null;
+  });
+
+  it("should send the request using Builder Pattern with DataFaker", async () => {});
 });

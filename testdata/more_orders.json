@@ -1,0 +1,27 @@
+[{
+    "user_id": "3",
+    "product_id": "7",
+    "product_name": "Lenovo V14 Gen 4 AMD",
+    "product_amount": 5600,
+    "qty": 1,
+    "tax_amt": 566,
+    "total_amt": 6166
+},
+{
+    "user_id": "9",
+    "product_id": "18",
+    "product_name": "Lenovo V15 Gen 15 AMD",
+    "product_amount": 5900,
+    "qty": 1,
+    "tax_amt": 590,
+    "total_amt": 6490
+},
+{
+    "user_id": "16",
+    "product_id": "19",
+    "product_name": "Dell Pro 6 Plus",
+    "product_amount": 16534.00,
+    "qty": 1,
+    "tax_amt": 1653.40,
+    "total_amt": 18187.4
+}]
