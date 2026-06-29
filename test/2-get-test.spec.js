@@ -38,6 +38,7 @@ describe('Get API Tests using SuperTest', () => {
 	it('should demo get API with header', async () => {
 
 	});
+});
 
 // describe('Get API tests using supertest', () => {
 // 	const baseurl = 'https://reqres.in';

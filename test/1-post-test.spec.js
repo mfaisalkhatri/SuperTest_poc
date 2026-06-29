@@ -19,6 +19,8 @@ import { expect } from "chai";
 import orders from "../testdata/orders.json" with { type: "json" };
 import authCredentials from "../testdata/auth_credentials.json" with { type: "json" };
 import fs from "node:fs";
+import Path from 'path';
+import { dirname } from 'path';
 
 describe("Post API tests using supertest", () => {
   const baseurl = "http://localhost:3004";
@@ -106,7 +108,7 @@ describe("Post API tests using supertest", () => {
 
   it("should read the request payload from JSON file dynamically", async () => {
     const requestBody = JSON.parse(
-      fs.readFileSync("../testdata/more_orders.json", "utf-8"),
+      fs.readFileSync("./testdata/more_orders.json", "utf-8"),
     );
 
     await request(baseurl)
@@ -128,6 +130,7 @@ describe("Post API tests using supertest", () => {
   });
 
   it("should upload an image and return status code 200", async () => {
+    const __dirname = process.cwd();
     const filePath = Path.join(__dirname, "/testdata/sample_image.png");
 
     let response = await request(baseurl)
