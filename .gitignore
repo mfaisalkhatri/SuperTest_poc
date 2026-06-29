@@ -9,3 +9,6 @@
 *.iml
 /mochawesome-report/
 .DS_STORE
+
+#Env
+.env

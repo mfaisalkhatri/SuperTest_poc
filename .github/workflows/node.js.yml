@@ -1,17 +1,14 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on:
   push:
     branches:
-        - main
-        - issue-*
+      - main
+      - issue-*
   pull_request:
     branches:
-        - main
-        - issue-*
+      - main
+      - issue-*
 permissions:
   statuses: write
   checks: write
@@ -20,31 +17,49 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [20.x,22.x,24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [20.x, 22.x, 24.x]
 
     steps:
-    - uses: actions/checkout@v6
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v6
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    - name: Run Tests
-      run: npm test
-    
-    - name: Test Report
-      uses: dorny/test-reporter@v3
-      if: success() || failure()
-      with:
-          name: Test Results        
+      - uses: actions/checkout@v7
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Clean old reports
+        run: rm -rf reports/test-results.json
+
+      - name: Start Restful E-commerce and HTTPBin applications using Docker Compose
+        run: |
+          docker compose -f docker-compose-ecommerce.yml up -d
+          docker compose -f docker-compose-httpbin.yml up -d
+
+      - name: Wait until Restful E-commerce and HTTPBin applications are ready
+        run: |
+          npx wait-on --timeout 60000 --interval 5000 http://localhost:3004/health
+          npx wait-on --timeout 60000 --interval 5000 http://localhost:80
+
+      - name: Run Tests
+        run: npm run test-and-generate-json-report
+
+      - name: Stop the service
+        if: always()
+        run: |
+          docker compose -f docker-compose-ecommerce.yml down --remove-orphans
+          docker compose -f docker-compose-httpbin.yml down --remove-orphans
+
+      - name: Test Report
+        uses: dorny/test-reporter@v3
+        if: always()
+        with:
+          name: Test Results
           path: ${{ github.workspace }}/reports/test-results.json
-          reporter: 'mocha-json'
+          reporter: "mocha-json"

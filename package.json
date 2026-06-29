@@ -5,8 +5,9 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha **/*.spec.js && mocha --reporter json > reports/test-results.json",
-		"report": "mocha --reporter mochawesome"
+		"test": "mocha **/*.spec.js",
+		"test-and-generate-json-report": "mocha --reporter json > reports/test-results.json",
+		"html-report": "mocha --reporter mochawesome"
 	},
 	"keywords": [
 		"supertest"
@@ -14,6 +15,7 @@
 	"author": "Faisal Khatri",
 	"license": "ISC",
 	"devDependencies": {
+		"@faker-js/faker": "^10.5.0",
 		"chai": "^6.2.2",
 		"mocha": "^11.7.6",
 		"supertest": "^7.2.2"
