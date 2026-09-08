@@ -25,15 +25,24 @@ You need to have the following installed on your machine:
 4. For running the tests, you need to type the command: `npm run test`. _(Check Package.json for more details)_
 5. For generating the mochawesome report, run the command `npm run html-report` _(Check Package.json for more details.)_ It will generate and export the report in `mochawesome-report` folder from which you can open the `index.html` file to view the report.
 
-## Talking more about the Scenarios Covered in this project:
+## Scenarios Covered in this project:
 
-- I have covered, `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests. The example code is available in the test folder of the repository.
+- The `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests API test automation examples are covered using the [Restful E-Commerce](https://github.com/mfaisalkhatri/restful-ecommerce) demo web services and [Httpbin.org](https://httpbin.org/) demo APIs.
 
-- End to End scenarios have been added for the restful booker APIs. Check out [API Testing with superTest](https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329) for more details.
+- End to End scenarios have been added using the [restful-booker](https://restful-booker.herokuapp.com/apidoc/index.html) APIs.
 
-- [Mochawesome reporter](https://www.npmjs.com/package/mochawesome) is used to generate the reports and show summary of the tests. I found it quite useful report as it shows the test description along with the tests and the time taken to run the tests.
+- Restful E-Commerce Demo APIs are used to write the 
 
-<img src="assets/mochawesome-report.png"/>
+- [Mochawesome reporter](https://www.npmjs.com/package/mochawesome) is used to generate the reports and show summary of the tests.
+
+<div align="center">
+<img src="assets/mochawesome-report.png" width="500" height="300"/>
+</div>
+
+## :writing_hand: Tutorial Links
+- [How to Test POST API Requests with SuperTest in Node.js](https://medium.com/gitconnected/how-to-test-post-api-requests-with-supertest-in-node-js-97f5b9f9c8eb?sharedUserId=iamfaisalkhatri)
+- [End-to-End API Testing with SuperTest](https://medium.com/@iamfaisalkhatri/api-testing-using-supertest-ea37522fa329?sharedUserId=iamfaisalkhatri)
+
 
 ## :question: Need Assistance?
 
@@ -51,4 +60,3 @@ You need to have the following installed on your machine:
 - [Medium](https://medium.com/@iamfaisalkhatri)
 - [YouTube](https://www.youtube.com/@faisalkhatriqa)
 - [DZone](https://dzone.com/authors/mfaisalkhatri)
-
