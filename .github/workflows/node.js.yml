@@ -50,6 +50,10 @@ jobs:
           npx wait-on --timeout 60000 --interval 5000 http://localhost:3001
 
       - name: Run Tests
+        env:
+        USER: ${{ secrets.USER }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         run: npm run test-and-generate-json-report
 
       - name: Stop the service
