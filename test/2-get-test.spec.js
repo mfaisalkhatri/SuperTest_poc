@@ -91,7 +91,7 @@ describe('Get API Tests using SuperTest', () => {
 			.expect(401);
 	});
 
-	it.only('should successfully authenticate user using bearer authentication', async () => {
+	it('should successfully authenticate user using bearer authentication', async () => {
 		const auth_token = process.env.AUTH_TOKEN
 		let response = await request(httpbin_baseurl).get("/bearer")
 			.set("Accept", "application/json")
