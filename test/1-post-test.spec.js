@@ -20,7 +20,7 @@ import orders from "../testdata/orders.json" with { type: "json" };
 import authCredentials from "../testdata/auth_credentials.json" with { type: "json" };
 import fs from "node:fs";
 import Path from "path";
-import { dirname } from "path";
+import bookings from "../testdata/bookings.json" with { type: "json" };
 import {
   buildMultipleOrders,
   buildOrder,

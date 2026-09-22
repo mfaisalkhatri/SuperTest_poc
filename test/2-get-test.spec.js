@@ -35,7 +35,8 @@ describe('Get API Tests using SuperTest', () => {
 		expect(response.body.orders[0].total_amt).to.be.equal(4305.99);
 	});
 
-	it('should demo get API with header', async () => {
+	it('should fetch the records from GET API using path parameter', async () => {
+		
 
 	});
 });
