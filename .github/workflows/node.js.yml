@@ -19,6 +19,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      USER: ${{ secrets.USER }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+
     strategy:
       matrix:
         node-version: [20.x, 22.x, 24.x]
@@ -37,15 +42,17 @@ jobs:
       - name: Clean old reports
         run: rm -rf reports/test-results.json
 
-      - name: Start Restful E-commerce and HTTPBin applications using Docker Compose
+      - name: Start Restful E-commerce, Restful Booker, and HTTPBin applications using Docker Compose
         run: |
           docker compose -f docker-compose-ecommerce.yml up -d
           docker compose -f docker-compose-httpbin.yml up -d
+          docker compose -f docker-compose-restfulbooker.yml up -d
 
-      - name: Wait until Restful E-commerce and HTTPBin applications are ready
+      - name: Wait until Restful E-commerce, Restful Booker and HTTPBin applications are ready
         run: |
           npx wait-on --timeout 60000 --interval 5000 http://localhost:3004/health
           npx wait-on --timeout 60000 --interval 5000 http://localhost:80
+          npx wait-on --timeout 60000 --interval 5000 http://localhost:3001
 
       - name: Run Tests
         run: npm run test-and-generate-json-report
@@ -55,6 +62,7 @@ jobs:
         run: |
           docker compose -f docker-compose-ecommerce.yml down --remove-orphans
           docker compose -f docker-compose-httpbin.yml down --remove-orphans
+          docker compose -f docker-compose-restfulbooker.yml down --remove-orphans
 
       - name: Test Report
         uses: dorny/test-reporter@v3

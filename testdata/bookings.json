@@ -1,0 +1,45 @@
+  [{
+    "firstname": "Michael",
+    "lastname": "Denver",
+    "totalprice": 200,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-10-01",
+      "checkout": "2025-11-01"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Tony",
+    "lastname": "Denver",
+    "totalprice": 500,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-11-01",
+      "checkout": "2025-11-11"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Mark",
+    "lastname": "Waugh",
+    "totalprice": 300,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-10-07",
+      "checkout": "2025-10-17"
+    },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Ibrahim",
+    "lastname": "Masood",
+    "totalprice": 1900,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2026-01-01",
+      "checkout": "2026-01-23"
+    },
+    "additionalneeds": "Breakfast"
+  }
+  ]
