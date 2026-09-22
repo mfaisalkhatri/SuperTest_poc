@@ -16,8 +16,11 @@ describe("Data driven Post API tests using supertest", () => {
       expect(response.body.bookingid).to.not.be.null;
       expect(response.body.booking.firstname).to.equal(booking.firstname);
       expect(response.body.booking.lastname).to.equal(booking.lastname);
-
-    console.log(response.body);
+      expect(response.body.booking.totalprice).to.equal(booking.totalprice);
+      expect(response.body.booking.depositpaid).to.equal(booking.depositpaid);
+      expect(response.body.booking.bookingdates.checkin).to.equal(booking.bookingdates.checkin);
+      expect(response.body.booking.bookingdates.checkout).to.equal(booking.bookingdates.checkout);
+      expect(response.body.booking.additionalneeds).to.equal(booking.additionalneeds);
     });
   });
 });
