@@ -114,8 +114,11 @@ describe("Get API Tests using SuperTest", () => {
     expect(response.body.token).to.equal(auth_token);
   });
 
-  it("should return all orders", async () => {
+  it.only("should return all orders", async () => {
     const response = await request(ecommerce_baseurl).get("/getAllOrders");
 	expect (response.statusCode).to.be.equal(200);
+	expect(response.body).to.be.exist;
+	expect(response.body).to.be.an("object");
+	expect(response.body).to.not.be.an("array");
   });
 });
