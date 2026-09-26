@@ -57,6 +57,18 @@ describe("Get API Tests using SuperTest", () => {
     expect(response.body.orders[0].total_amt).to.be.greaterThanOrEqual(4305.98);
   });
 
+  it("should fetch the records from Get API using multiple query params", async () => {
+    let response = await request(ecommerce_baseurl)
+      .get("/getOrder")
+      .query({ product_id: 3, user_id: 3 });
+
+    expect(response.statusCode).to.be.equal(200);
+    expect(response.body.message).to.be.equal("Order found!!");
+    expect(response.body.orders.length).to.be.above(0);
+    expect(response.body.orders[0].user_id).to.equal("3");
+    expect(response.body.orders[0].product_id).to.equal("3");
+  });
+
   it("should fetch the records from GET API using path parameter", async () => {
     let response = await request(restfulbooker_baseurl)
       .get(`/booking/${bookingid}`)
@@ -116,9 +128,9 @@ describe("Get API Tests using SuperTest", () => {
 
   it("should return all orders", async () => {
     const response = await request(ecommerce_baseurl).get("/getAllOrders");
-	expect (response.statusCode).to.be.equal(200);
-	expect(response.body).to.be.exist;
-	expect(response.body).to.be.an("object");
-	expect(response.body).to.not.be.an("array");
+    expect(response.statusCode).to.be.equal(200);
+    expect(response.body).to.be.exist;
+    expect(response.body).to.be.an("object");
+    expect(response.body).to.not.be.an("array");
   });
 });
