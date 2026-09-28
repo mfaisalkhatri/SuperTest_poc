@@ -157,10 +157,22 @@ describe("Get API Tests using SuperTest", () => {
     expect(response.header);
   });
 
-  it.only("should validate the response time", async () => {
-    await request(ecommerce_baseurl).get("/getAllOrders").timeout({
-      response: 50,
-      deadline:100
-    }).expect(200);
+  it("should validate the response time", async () => {
+    await request(ecommerce_baseurl)
+      .get("/getAllOrders")
+      .timeout({
+        response: 50,
+        deadline: 100,
+      })
+      .expect(200);
+  });
+
+  it("should validate the response headers", async () => {
+    const response = await request(ecommerce_baseurl)
+      .get("/getAllOrders")
+      .expect(200);
+
+    expect(response.headers).to.have.property("content-type");
+    expect(response.headers["content-type"]).to.include("application/json");
   });
 });
