@@ -133,4 +133,34 @@ describe("Get API Tests using SuperTest", () => {
     expect(response.body).to.be.an("object");
     expect(response.body).to.not.be.an("array");
   });
+
+  it("should fetch the records from Get API and extract the response", async () => {
+    let response = await request(ecommerce_baseurl)
+      .get("/getOrder")
+      .query({ product_id: 3, user_id: 3 })
+      .expect(200);
+
+    expect(response.statusCode).to.be.equal(200);
+    console.log(response.body);
+    console.log("Value in the Message field is: ", response.body.message);
+    console.log("Product Name is:", response.body.orders[0].product_name);
+    console.log("Status Code is: ", response.statusCode);
+    console.log("Response headers are: ", response.headers);
+  });
+
+  it("should fetch the records from Get API and validate the response", async () => {
+    let response = await request(ecommerce_baseurl)
+      .get("/getOrder")
+      .query({ product_id: 3, user_id: 3 });
+
+    expect(response.statusCode).to.be.equal(200);
+    expect(response.header);
+  });
+
+  it.only("should validate the response time", async () => {
+    await request(ecommerce_baseurl).get("/getAllOrders").timeout({
+      response: 50,
+      deadline:100
+    }).expect(200);
+  });
 });
