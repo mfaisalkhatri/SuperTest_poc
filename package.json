@@ -6,7 +6,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha **/*.spec.js",
-		"test-and-generate-json-report": "mocha --reporter json > reports/test-results.json",
+		"test-and-generate-json-report": "mocha --reporter json --reporter-option output=reports/test-results.json",
 		"html-report": "mocha --reporter mochawesome"
 	},
 	"keywords": [
